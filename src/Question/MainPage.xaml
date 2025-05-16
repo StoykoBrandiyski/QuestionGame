@@ -1,0 +1,44 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Question.MainPage"
+             BackgroundColor="Yellow"
+             Padding="20">
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="20">
+            <Label x:Name="QuestionLabel"
+               FontSize="24"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+
+            <Button x:Name="AnswerButton1" HorizontalOptions="Fill"  Clicked="OnAnswerClicked" />
+            <Button x:Name="AnswerButton2" HorizontalOptions="Fill"  Clicked="OnAnswerClicked" />
+            <Button x:Name="AnswerButton3" HorizontalOptions="Fill"  Clicked="OnAnswerClicked" />
+
+            <Label x:Name="ScoreLabel"
+               FontSize="18"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               IsVisible="False" />
+
+            <Image
+                Source="dotnet_bot.png"
+                x:Name="ScoreImage"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                IsAnimationPlaying="True"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+            
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                <Button x:Name="ResetGame"
+                        Text="Game Again"
+                        IsVisible="False"
+                        Clicked="OnResetClicked" />
+                <Button x:Name="NextButton"
+                        Text="Next Question"
+                        IsVisible="False"
+                        Clicked="OnNextClicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
